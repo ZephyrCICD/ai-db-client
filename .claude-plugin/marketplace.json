@@ -9,9 +9,9 @@
     {
       "name": "ai-db-client",
       "description": "Query and safely mutate configured PostgreSQL, TimescaleDB, MySQL, and TDengine databases through local profiles, project routing, write guards, and audit logs.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "development",
-      "source": "./plugins/ai-db-client",
+      "source": "./",
       "homepage": "https://github.com/zephyrcicd/ai-db-client",
       "skills": [
         "./skills/db-client"

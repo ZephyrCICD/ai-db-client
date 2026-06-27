@@ -1,6 +1,6 @@
 {
   "name": "ai-db-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A local-first database client plugin for AI agents with profiles, project routing, write guards, and audit logs.",
   "author": {
     "name": "AI DB Client Contributors"

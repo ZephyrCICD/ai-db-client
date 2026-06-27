@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ai-db-client": {
+      "command": "node",
+      "args": [
+        "./plugins/ai-db-client/dist/index.js"
+      ],
+      "cwd": "."
+    }
+  }
+}

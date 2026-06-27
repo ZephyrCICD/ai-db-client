@@ -1,0 +1,25 @@
+{
+  "name": "ai-db-client",
+  "version": "0.1.1",
+  "description": "Profile-aware database client plugin for AI agents with local profiles, project routing, write guards, seed helpers, and audit logs.",
+  "author": {
+    "name": "AI DB Client Contributors"
+  },
+  "homepage": "https://github.com/ZephyrCICD/ai-db-client",
+  "repository": "https://github.com/ZephyrCICD/ai-db-client",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "codex",
+    "mcp",
+    "database",
+    "postgres",
+    "mysql",
+    "tdengine",
+    "timescaledb"
+  ],
+  "skills": [
+    "./skills/db-client"
+  ],
+  "mcpServers": "./.mcp.json"
+}

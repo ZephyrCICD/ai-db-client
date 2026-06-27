@@ -20573,7 +20573,7 @@ __nccwpck_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 const config = (0,_config_js__WEBPACK_IMPORTED_MODULE_3__/* .loadConfig */ .Z)();
 const server = new _modelcontextprotocol_sdk_server_mcp_js__WEBPACK_IMPORTED_MODULE_0__/* .McpServer */ ._({
     name: "ai-db-client",
-    version: "0.1.0",
+    version: "0.1.1",
 });
 const contextShape = {
     profile: zod__WEBPACK_IMPORTED_MODULE_5__/* .string */ .Yj().optional().describe("Configured database profile name."),
