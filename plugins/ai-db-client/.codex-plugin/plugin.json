@@ -5,8 +5,8 @@
   "author": {
     "name": "AI DB Client Contributors"
   },
-  "homepage": "https://github.com/your-org/ai-db-client",
-  "repository": "https://github.com/your-org/ai-db-client",
+  "homepage": "https://github.com/zephyrcicd/ai-db-client",
+  "repository": "https://github.com/zephyrcicd/ai-db-client",
   "license": "MIT",
   "keywords": [
     "database",

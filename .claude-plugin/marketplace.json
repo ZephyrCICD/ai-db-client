@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-db-client",
+  "description": "Profile-aware database client plugin for AI agents.",
+  "owner": {
+    "name": "AI DB Client Contributors"
+  },
+  "plugins": [
+    {
+      "name": "ai-db-client",
+      "description": "Query and safely mutate configured PostgreSQL, TimescaleDB, MySQL, and TDengine databases through local profiles, project routing, write guards, and audit logs.",
+      "version": "0.1.0",
+      "category": "development",
+      "source": "./plugins/ai-db-client",
+      "homepage": "https://github.com/zephyrcicd/ai-db-client",
+      "skills": [
+        "./skills/db-client"
+      ],
+      "strict": false
+    }
+  ]
+}

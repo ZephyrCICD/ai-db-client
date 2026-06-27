@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/your-org/ai-db-client/config/project.schema.json",
+  "$id": "https://github.com/zephyrcicd/ai-db-client/config/project.schema.json",
   "title": "AI DB Client Project Routes",
   "type": "object",
   "required": [

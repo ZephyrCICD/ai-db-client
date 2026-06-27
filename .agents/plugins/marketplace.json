@@ -1,0 +1,20 @@
+{
+  "name": "ai-db-client",
+  "interface": {
+    "displayName": "AI DB Client"
+  },
+  "plugins": [
+    {
+      "name": "ai-db-client",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai-db-client"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

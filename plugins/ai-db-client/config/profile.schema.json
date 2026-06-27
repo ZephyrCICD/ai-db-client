@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/your-org/ai-db-client/config/profile.schema.json",
+  "$id": "https://github.com/zephyrcicd/ai-db-client/config/profile.schema.json",
   "title": "AI DB Client Profiles",
   "type": "object",
   "required": [

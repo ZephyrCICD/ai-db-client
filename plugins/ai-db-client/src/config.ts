@@ -22,6 +22,25 @@ function readYamlFile<T>(path: string): T | undefined {
   return YAML.parse(readFileSync(path, "utf8")) as T;
 }
 
+function loadEnvFile(path: string): void {
+  if (!existsSync(path)) return;
+  for (const line of readFileSync(path, "utf8").split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#") || !trimmed.includes("=")) continue;
+    const [rawKey, ...rest] = trimmed.split("=");
+    const key = rawKey.trim();
+    if (!key || process.env[key] !== undefined) continue;
+    let value = rest.join("=").trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+    process.env[key] = value;
+  }
+}
+
 function loadProfiles(configDir: string): Map<string, DbProfile> {
   const profileFile = ["profiles.yaml", "profiles.yml", "profiles.json"]
     .map((name) => join(configDir, name))
@@ -54,6 +73,7 @@ export function loadConfig(): ClientConfig {
   );
   mkdirSync(configDir, { recursive: true });
   mkdirSync(stateDir, { recursive: true });
+  loadEnvFile(join(configDir, ".env"));
   return {
     profiles: loadProfiles(configDir),
     projects: loadProjects(configDir),
