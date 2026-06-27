@@ -1,6 +1,6 @@
 {
   "name": "ai-db-client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Profile-aware database client plugin for AI agents with local profiles, project routing, write guards, seed helpers, and audit logs.",
   "author": {
     "name": "AI DB Client Contributors"

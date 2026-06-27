@@ -12,7 +12,7 @@ const config = loadConfig();
 
 const server = new McpServer({
   name: "ai-db-client",
-  version: "0.1.1",
+  version: "0.1.2",
 });
 
 const contextShape = {
