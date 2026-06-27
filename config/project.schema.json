@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/your-org/ai-db-client/config/project.schema.json",
+  "title": "AI DB Client Project Routes",
+  "type": "object",
+  "required": [
+    "projects"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "match",
+          "profile"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "match": {
+            "type": "string",
+            "description": "Path substring, glob-like marker, or repository name to match."
+          },
+          "profile": {
+            "type": "string"
+          },
+          "database": {
+            "type": "string"
+          },
+          "schema": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

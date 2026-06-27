@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/your-org/ai-db-client/config/profile.schema.json",
+  "title": "AI DB Client Profiles",
+  "type": "object",
+  "required": [
+    "profiles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "profiles": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/profile"
+      }
+    }
+  },
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "required": [
+        "type",
+        "capability"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "postgres",
+            "mysql",
+            "tdengine"
+          ]
+        },
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "database": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "passwordEnv": {
+          "type": "string",
+          "description": "Environment variable name containing the password."
+        },
+        "urlEnv": {
+          "type": "string",
+          "description": "Environment variable name containing a connection URL or DSN."
+        },
+        "ssl": {
+          "type": [
+            "boolean",
+            "object"
+          ]
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "defaultLimit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "maxRows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "maxAffectedRows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "capability": {
+          "enum": [
+            "read_only",
+            "dev_write",
+            "dev_ddl",
+            "admin_tools",
+            "prod_guarded"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

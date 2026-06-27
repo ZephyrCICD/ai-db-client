@@ -1,0 +1,12 @@
+projects:
+  - match: /path/to/your-app
+    profile: local_postgres_dev
+    database: app_dev
+    schema: public
+    description: Default database route for your app repository.
+
+  - match: metrics-service
+    profile: local_timescale_dev
+    database: metrics_dev
+    schema: public
+    description: Default database route for metrics service work.

@@ -1,0 +1,39 @@
+{
+  "name": "ai-db-client",
+  "version": "0.1.0",
+  "description": "A local-first database client plugin for AI agents with profiles, project routing, write guards, and audit logs.",
+  "author": {
+    "name": "AI DB Client Contributors"
+  },
+  "homepage": "https://github.com/your-org/ai-db-client",
+  "repository": "https://github.com/your-org/ai-db-client",
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "mcp",
+    "codex",
+    "claude",
+    "postgres",
+    "mysql",
+    "tdengine"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AI DB Client",
+    "shortDescription": "Profile-aware database access for AI agents.",
+    "longDescription": "AI DB Client provides a local MCP server and agent skill for querying and safely mutating PostgreSQL, MySQL, TDengine, and future database backends through configurable profiles, project routing, safety policies, and audit logs.",
+    "developerName": "AI DB Client Contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Inspect the database schema for this project.",
+      "Seed mock data using the dev database profile.",
+      "Suggest a database profile from this connection info."
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+profiles:
+  local_postgres_dev:
+    type: postgres
+    host: 127.0.0.1
+    port: 5432
+    database: app_dev
+    schema: public
+    user: app
+    passwordEnv: APP_DEV_POSTGRES_PASSWORD
+    capability: dev_write
+    defaultLimit: 100
+    maxRows: 5000
+    maxAffectedRows: 1000
+    description: Local PostgreSQL development database.
+
+  local_timescale_dev:
+    type: postgres
+    extensions:
+      - timescaledb
+    host: 127.0.0.1
+    port: 5432
+    database: metrics_dev
+    schema: public
+    user: app
+    passwordEnv: METRICS_DEV_POSTGRES_PASSWORD
+    capability: dev_write
+    defaultLimit: 100
+    maxRows: 5000
+    maxAffectedRows: 1000
+    description: Local TimescaleDB development database.
+
+  local_mysql_dev:
+    type: mysql
+    host: 127.0.0.1
+    port: 3306
+    database: app_dev
+    user: app
+    passwordEnv: APP_DEV_MYSQL_PASSWORD
+    capability: dev_write
+    defaultLimit: 100
+    maxRows: 5000
+    maxAffectedRows: 1000
+    description: Local MySQL development database.
+
+  local_tdengine_dev:
+    type: tdengine
+    host: 127.0.0.1
+    port: 6030
+    database: metrics_dev
+    user: root
+    passwordEnv: TDENGINE_DEV_PASSWORD
+    capability: dev_write
+    defaultLimit: 100
+    maxRows: 5000
+    maxAffectedRows: 1000
+    description: Local TDengine development database using taos CLI.

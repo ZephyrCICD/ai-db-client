@@ -1,0 +1,12 @@
+policies:
+  requireConfirmation: true
+  blockProductionWritesByDefault: true
+  dangerousSqlPatterns:
+    - "\\bdrop\\b"
+    - "\\btruncate\\b"
+    - "\\bdelete\\s+from\\s+\\S+\\s*;?\\s*$"
+    - "\\bupdate\\s+\\S+\\s+set\\b(?![\\s\\S]*\\bwhere\\b)"
+  profileSuggestions:
+    enabled: true
+    minRepeatedMentions: 2
+    redactSecrets: true
