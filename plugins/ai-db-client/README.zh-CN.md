@@ -38,6 +38,8 @@ npm install
 npm run build
 ```
 
+发布版插件已包含 `dist/index.js`，普通安装不需要用户自行构建。
+
 ### Codex Plugin
 
 仓库包含：

@@ -40,6 +40,8 @@ npm install
 npm run build
 ```
 
+The published plugin includes `dist/index.js`, so normal plugin installation does not require users to build from source.
+
 ### Codex Plugin
 
 The repository includes:
