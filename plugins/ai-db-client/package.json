@@ -7,7 +7,7 @@
     "ai-db-client-mcp": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && ncc build src/index.ts -o dist --no-cache",
+    "build": "npm run check && rm -rf dist && ncc build src/index.ts -o dist --no-cache",
     "check": "tsc -p tsconfig.json --noEmit",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js"
